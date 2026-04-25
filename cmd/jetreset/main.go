@@ -22,7 +22,11 @@ func main() {
 		scheduler.Unschedule(processName)
 		return
 	}
+	if len(os.Args) > 1 && os.Args[1] == "--run-schedule" {
+		scheduler.Schedule(processName)
+		return
+	}
+
 	reset.Reset(home, products)
-	scheduler.Schedule(processName)
 	fmt.Println("Done.")
 }
