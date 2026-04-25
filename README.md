@@ -16,28 +16,34 @@ Supports **IntelliJ IDEA**, **GoLand**, **PyCharm**, **WebStorm**, **CLion**, **
 
 Download the latest pre-built binary for your platform from the [Releases](https://github.com/insigmo/jetreset/releases/latest) page:
 
-#### Linux / macOS
+### Linux / macOS
 
 ```bash
 # Download and run installer
 curl -fsSL https://raw.githubusercontent.com/insigmo/jetreset/refs/heads/master/install.sh | bash
+```
 
-# Run
+### Windows (PowerShell)
+
+```powershell
+# Download and run installer
+irm https://raw.githubusercontent.com/insigmo/jetreset/refs/heads/master/install.ps1 | iex
+```
+
+### Run on Linux/MacOS
+```bash
 ./jetreset # Run without flags to reset all detected JetBrains IDEs
 ```
 
-Run scheduler
+### Run on Windows
+```powershell
+.\jetreset.exe
+```
+
+### Run scheduler
 ```bash
 ./jetreset --run-schedule # Run scheduler for reseting every month
 ./jetreset --stop         # Stop schedurler
-```
-
-#### Windows
-
-Download `jetreset-windows-amd64.exe` and run it directly or via PowerShell:
-
-```powershell
-.\jetreset-windows-amd64.exe
 ```
 
 ### Build from source
@@ -48,13 +54,6 @@ Requires Go 1.22+.
 git clone https://github.com/insigmo/jetreset.git
 cd jetreset
 go build -ldflags="-s -w" -trimpath -o jetreset .
-```
-
----
-
-## Usage
-
-```bash
 ```
 
 ---
