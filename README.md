@@ -25,8 +25,17 @@ curl -L https://github.com/insigmo/jetreset/releases/latest/download/jetreset-li
 # Make executable
 chmod +x jetreset
 
+# If you have MacOS you need to delete quarantine mark
+xattr -d com.apple.quarantine ./jetreset
+
 # Run
-./jetreset
+./jetreset # Run without flags to reset all detected JetBrains IDEs
+```
+
+Run scheduler
+```bash
+./jetreset --run-schedule # Run scheduler for reseting every month
+./jetreset --stop         # Stop schedurler
 ```
 
 #### Windows
@@ -52,10 +61,6 @@ go build -ldflags="-s -w" -trimpath -o jetreset .
 ## Usage
 
 ```bash
-./jetreset # Run without flags to reset all detected JetBrains IDEs
-
-./jetreset --run-schedule # Run scheduler for reseting every month
-./jetreset --stop         # Stop schedurler
 ```
 
 ---
