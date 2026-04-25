@@ -1,14 +1,12 @@
 package reset
 
 import (
-	"fmt"
 	"os/exec"
 	"path/filepath"
 	"regexp"
 )
 
 func resetLinux(h string, products []string) {
-	fmt.Println("Linux:")
 	cleanDir(filepath.Join(h, ".config", "JetBrains"), products)
 	jprefs := filepath.Join(h, ".java", ".userPrefs")
 
@@ -27,7 +25,6 @@ func resetLinux(h string, products []string) {
 }
 
 func resetMacos(h string, products []string) {
-	fmt.Println("macOS:")
 	cleanDir(filepath.Join(h, "Library", "Preferences"), products)
 	cleanDir(filepath.Join(h, "Library", "Application Support", "JetBrains"), products)
 

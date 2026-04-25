@@ -23,7 +23,7 @@ func main() {
 
 	if len(os.Args) > 1 && os.Args[1] == "--stop" {
 		scheduler.Unschedule(processName)
-		fmt.Println("🛑 Scheduler stopped. Auto-reset disabled.")
+		fmt.Println("🛑 Scheduler stopped. Auto-reset disabled. Check via `crontab -l`")
 		return
 	}
 	if len(os.Args) > 1 && os.Args[1] == "--run-schedule" {
