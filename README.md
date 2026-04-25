@@ -19,14 +19,8 @@ Download the latest pre-built binary for your platform from the [Releases](https
 #### Linux / macOS
 
 ```bash
-# Download (example for linux/amd64)
-curl -L https://github.com/insigmo/jetreset/releases/latest/download/jetreset-linux-amd64 -o jetreset
-
-# Make executable
-chmod +x jetreset
-
-# If you have MacOS you need to delete quarantine mark
-xattr -d com.apple.quarantine ./jetreset
+# Download and run installer
+curl -fsSL https://raw.githubusercontent.com/insigmo/jetreset/main/install.sh | bash
 
 # Run
 ./jetreset # Run without flags to reset all detected JetBrains IDEs
