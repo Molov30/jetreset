@@ -4,7 +4,9 @@
 [![Go](https://img.shields.io/badge/Go-1.22+-00ADD8?style=flat-square&logo=go)](https://go.dev)
 
 
-A cross-platform CLI tool written in Go for resetting the trial period of JetBrains IDEs.
+A cross-platform CLI tool for resetting the trial period of JetBrains IDEs.
+If you already have licenses in your IDEs, it'll be resetting too.
+If you're from Russia, you need to have VPN for starting a new trial period.
 
 Supports **IntelliJ IDEA**, **GoLand**, **PyCharm**, **WebStorm**, **CLion**, **PhpStorm**, **Rider**, **DataGrip**, and **RubyMine**.
 
